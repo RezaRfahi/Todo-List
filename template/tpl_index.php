@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+<?php
+
+echo '<!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>CodePen - Task manager UI</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 <body>
@@ -11,7 +13,7 @@
 <div class="page">
   <div class="pageHeader">
     <div class="title">Dashboard</div>
-    <div class="userPanel"><i class="fa fa-chevron-down"></i><span class="username">John Doe </span><img src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/73.jpg" width="40" height="40"/></div>
+    <div class="userPanel"><i class="fa fa-chevron-down"></i><span class="username">Nicole Aniston </span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRec2Lcwv5fFgOkjrCMpmfvKVfizgB1Z-yh1av0vheec76zNITPjwm_75_DXcb8j9npfWU&usqp=CAU" width="40" height="40"/></div>
   </div>
   <div class="main">
     <div class="nav">
@@ -71,7 +73,9 @@
   </div>
 </div>
 <!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>  
+<script  src="../assets/js/script.js"></script>
 
 </body>
 </html>
+';
