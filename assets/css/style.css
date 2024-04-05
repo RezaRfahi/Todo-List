@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Dosis:300|Lato:300,400,600,700|Roboto+Condensed:300,700|Open+Sans+Condensed:300,600|Open+Sans:400,300,600,700|Maven+Pro:400,700);
-@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+@import url(https://cdn.jsdelivr.net/npm/@fontawesome/fontawesome-free@6.4.2/css/fontawesome.min.css);
 html {
   background-image: url(http://www.ultraimg.com/images/2UeGfhZ.jpg);
 }
@@ -266,4 +266,14 @@ body {
 
 .clear {
   clear: both;
+}
+.add-folder-button{
+  background-color: #ccc;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.add-folder-input{
+  width: 65%;
+  margin-left: -5%;
 }

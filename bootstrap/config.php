@@ -5,5 +5,5 @@ $db_connection = (object)[
     'port' => 3306,
     'username' => 'root',
     'password' => '',
-    'database' => 'todop_task'
+    'database' => 'todo_task'
 ];

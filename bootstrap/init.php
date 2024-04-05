@@ -1,5 +1,4 @@
 <?php
-
 include "constans.php";
 include "config.php";
 include "./libs/helpers.php";

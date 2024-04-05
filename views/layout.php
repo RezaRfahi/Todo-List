@@ -1,11 +1,4 @@
-<?php
-
-<<<<<<<< HEAD:views/layout.php
-echo '
 <!DOCTYPE html>
-========
-echo '<!DOCTYPE html>
->>>>>>>> structure:template/tpl_index.php
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
@@ -18,7 +11,7 @@ echo '<!DOCTYPE html>
 <div class="page">
   <div class="pageHeader">
     <div class="title">Dashboard</div>
-    <div class="userPanel"><i class="fa fa-chevron-down"></i><span class="username">Nicole Aniston </span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRec2Lcwv5fFgOkjrCMpmfvKVfizgB1Z-yh1av0vheec76zNITPjwm_75_DXcb8j9npfWU&usqp=CAU" width="40" height="40"/></div>
+    <div class="userPanel"><span class="username">Nicole Aniston </span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRec2Lcwv5fFgOkjrCMpmfvKVfizgB1Z-yh1av0vheec76zNITPjwm_75_DXcb8j9npfWU&usqp=CAU" width="40" height="40"/></div>
   </div>
   <div class="main">
     <div class="nav">
@@ -28,13 +21,18 @@ echo '<!DOCTYPE html>
         </div>
       </div>
       <div class="menu">
-        <div class="title">Navigation</div>
+        <div class="title">Folder</div>
         <ul>
-          <li> <i class="fa fa-home"></i>Home</li>
-          <li><i class="fa fa-signal"></i>Activity</li>
-          <li class="active"> <i class="fa fa-tasks"></i>Manage Tasks</li>
-          <li> <i class="fa fa-envelope"></i>Messages</li>
+        <?php foreach ($folders as $folder) :?>
+            <li> <i class="fa fa-folder"></i><?=$folder->name?>  <a href="?delete_folder=<?=$folder->id?>"><i class="fa fa-trash"></i></a></li>
+            <?php endforeach; ?>
+            <li class="active"> <i class="fa fa-folder"></i>Current Folder  <i class="fa fa-trash"></i></li>
+            <li class="add-folder-container">
+            <input type="text" class="add-folder-input" id="newFolderName" placeholder="New Folder">
+            <a><button class="add-folder-button" onclick="createNewFolder()">Add</button></a>
+        </li>
         </ul>
+
       </div>
     </div>
     <div class="view">
@@ -43,24 +41,24 @@ echo '<!DOCTYPE html>
         <div class="functions">
           <div class="button active">Add New Task</div>
           <div class="button">Completed</div>
-          <div class="button inverz"><i class="fa fa-trash-o"></i></div>
+          <div class="button inverz"><i class="fa fa-trash"></i></div>
         </div>
       </div>
       <div class="content">
         <div class="list">
           <div class="title">Today</div>
           <ul>
-            <li class="checked"><i class="fa fa-check-square-o"></i><span>Update team page</span>
+            <li class="checked"><i class="fa fa-check-square"></i><span>Update team page</span>
               <div class="info">
                 <div class="button green">In progress</div><span>Complete by 25/04/2014</span>
               </div>
             </li>
-            <li><i class="fa fa-square-o"></i><span>Design a new logo</span>
+            <li><i class="fa fa-square"></i> <span>Design a new logo</span>
               <div class="info">
                 <div class="button">Pending</div><span>Complete by 10/04/2014</span>
               </div>
             </li>
-            <li><i class="fa fa-square-o"></i><span>Find a front end developer</span>
+            <li><i class="fa fa-square"></i><span>Find a front end developer</span>
               <div class="info"></div>
             </li>
           </ul>
@@ -68,7 +66,7 @@ echo '<!DOCTYPE html>
         <div class="list">
           <div class="title">Tomorrow</div>
           <ul>
-            <li><i class="fa fa-square-o"></i><span>Find front end developer</span>
+            <li><i class="fa fa-square"></i><span>Find front end developer</span>
               <div class="info"></div>
             </li>
           </ul>
@@ -78,18 +76,9 @@ echo '<!DOCTYPE html>
   </div>
 </div>
 <!-- partial -->
-<<<<<<<< HEAD:views/layout.php
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script  src="../assets/js/script.js"></script>
-
-</body>
-</html>
-';
-========
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>  
 <script  src="../assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
 </html>
-';
->>>>>>>> structure:template/tpl_index.php
