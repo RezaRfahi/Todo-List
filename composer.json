@@ -1,0 +1,21 @@
+{
+    "name": "rezarefahi/todo-list",
+    "description": "simple todo list",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rezarefahi\\TodoList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RezaRfahi",
+            "email": "refahireza82@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "hekmatinasser/verta": "^8.4"
+    }
+}
