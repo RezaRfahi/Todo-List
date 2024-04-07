@@ -11,7 +11,12 @@ if (!isset($_POST['action']) || empty($_POST['action'])){
 
 switch ($_POST['action']){
     case 'addFolder' :
-        addFolders($_POST['folderName']);
+        if (!isset($_POST['folderName']) || strlen($_POST['folderName']) < 3)
+        {
+            echo "Please Enter a folder name with more than 3 characters";
+            die();
+        }
+        echo addFolders($_POST['folderName']);
         break;
 
     default:

@@ -22,7 +22,7 @@
       </div>
       <div class="menu">
         <div class="title">Folder</div>
-        <ul>
+        <ul class="folder-list">
         <?php foreach ($folders as $folder) :?>
             <li> <i class="fa fa-folder"></i><?=$folder->name?>  <a href="?delete_folder=<?=$folder->id?>"><i class="fa fa-trash"></i></a></li>
             <?php endforeach; ?>
@@ -89,7 +89,11 @@
                 method: "POST",
                 data: { action: "addFolder", folderName: input.val() },
                 success: function(response){
-                    alert(response);
+                    if (response == 1){
+                        $('<li><i class="fa fa-folder"></i>' + input.val() + '<a href="?delete_folder="><i class="fa fa-trash"></i></a></li>').appendTo('.folder-list');
+                    }else {
+                        alert(response);
+                    }
                 }
             });
         });
