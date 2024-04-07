@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Task manager UI</title>
+  <title><?= SITE_TITLE ?></title>
   <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
@@ -27,11 +27,12 @@
             <li> <i class="fa fa-folder"></i><?=$folder->name?>  <a href="?delete_folder=<?=$folder->id?>"><i class="fa fa-trash"></i></a></li>
             <?php endforeach; ?>
             <li class="active"> <i class="fa fa-folder"></i>Current Folder  <i class="fa fa-trash"></i></li>
-            <li class="add-folder-container">
-            <input type="text" class="add-folder-input" id="newFolderName" placeholder="New Folder">
-            <a><button class="add-folder-button" onclick="createNewFolder()">Add</button></a>
-        </li>
         </ul>
+          <div class="add-folder-container">
+              <input id="addFolderTxt" type="text" class="add-folder-input" id="newFolderName" placeholder="New Folder">
+              <button id="addFolderBtn" class="add-folder-button clickable">Add</button>
+          </div>
+
 
       </div>
     </div>
@@ -79,6 +80,20 @@
 <script  src="../assets/js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+<script>
+    $(document).ready(function() {
+        $('#addFolderBtn').click(function(e){
+            var input = $('#addFolderTxt');
+            $.ajax({
+                url: "process/ajaxHandler.php",
+                method: "POST",
+                data: { action: "addFolder", folderName: input.val() },
+                success: function(response){
+                    alert(response);
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

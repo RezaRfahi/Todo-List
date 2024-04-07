@@ -6,3 +6,13 @@ function toBeDie($message)
     <p style='color: #552277; font-weight: bold; font-size: 20px; margin-bottom: 10px;'>Error!: " . $message . "</p><br/></div>";
     die();
 }
+
+
+function isAjaxRequest()
+{
+    if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
+        // This is an AJAX request
+        return true;
+    }
+    return false;
+}

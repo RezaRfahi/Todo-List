@@ -273,6 +273,13 @@ body {
   border-radius: 3px;
 }
 
+.add-folder-button:hover{
+  cursor: pointer;
+  background-color: #99999999;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
 .add-folder-input{
   width: 65%;
   margin-left: -5%;
