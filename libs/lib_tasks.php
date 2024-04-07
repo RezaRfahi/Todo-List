@@ -8,3 +8,12 @@ function getFolders(){
     $records = $stmt->fetchAll(PDO::FETCH_OBJ);
     return $records;
 }
+
+function deleteFolders($id){
+    global $pdo;
+    $query = "DELETE FROM `folders` WHERE `id` = ?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$id]);
+    $rows = $stmt->rowCount();
+    return $rows;
+}
