@@ -11,10 +11,9 @@ if (!isset($_POST['action']) || empty($_POST['action'])){
 
 switch ($_POST['action']){
     case 'addFolder' :
-        var_dump($_POST);
+        addFolders($_POST['folderName']);
         break;
 
     default:
         toBeDie("Invalid Action");
 }
-var_dump($_POST);

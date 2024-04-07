@@ -16,3 +16,8 @@ function isAjaxRequest()
     }
     return false;
 }
+
+function currentUser()
+{
+    return 1;
+}

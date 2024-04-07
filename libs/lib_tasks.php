@@ -17,3 +17,14 @@ function deleteFolders($id){
     $rows = $stmt->rowCount();
     return $rows;
 }
+
+function addFolders($name){
+    global $pdo;
+    $user_id = currentUser();
+    $query = "INSERT INTO `folders`(`name`, `user_id`) VALUES (?, ?)";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$name, $user_id]);
+    $rows = $stmt->rowCount();
+    return $rows;
+}
+
