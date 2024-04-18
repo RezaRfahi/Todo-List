@@ -284,3 +284,7 @@ body {
   width: 65%;
   margin-left: -5%;
 }
+
+.task-created {
+  margin-right: 20px; font-size: 12px;
+}

@@ -28,3 +28,12 @@ function addFolders($name){
     return $rows;
 }
 
+function getTasks(){
+    global $pdo;
+    $user_id = currentUser();
+    $query = "SELECT * FROM `tasks` WHERE `user_id` = ?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$user_id]);
+    $records = $stmt->fetchAll(PDO::FETCH_OBJ);
+    return $records;
+}
