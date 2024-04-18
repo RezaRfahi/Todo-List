@@ -1,4 +1,4 @@
-<?php
+<?php defined('BASE_PATH') OR toBeDie('Access denied..!');
 
 function getFolders(){
     global $pdo;

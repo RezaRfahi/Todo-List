@@ -1,4 +1,4 @@
-<?php
+<?php defined('BASE_PATH') OR Die('Access denied..!');
 
 function toBeDie($message)
 {
