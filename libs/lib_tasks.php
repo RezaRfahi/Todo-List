@@ -37,3 +37,12 @@ function getTasks(){
     $records = $stmt->fetchAll(PDO::FETCH_OBJ);
     return $records;
 }
+
+function deleteTask($id){
+    global $pdo;
+    $query = "DELETE FROM `tasks` WHERE `id` = ?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$id]);
+    $rows = $stmt->rowCount();
+    return $rows;
+}
