@@ -60,7 +60,9 @@
         </div>
         <div class="view">
             <div class="viewHeader">
-                <div class="title">Manage Tasks</div>
+                <div class="title">
+                    <input id="addTaskTxt" type="text" class="add-task-input" placeholder="New Task Name" data-listener-added_40da385b="true" data-listener-added_1c538e48="true"/>
+                </div>
                 <div class="functions">
                     <div class="button active">Add New Task</div>
                 </div>

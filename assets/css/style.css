@@ -158,12 +158,16 @@ body {
   border-bottom: 1px solid #E0E0E0;
 }
 .main .view .viewHeader .title {
+  width: 70%;
+  height: 150%;
+  margin-left: 2%;
+  padding-left: 2%;
   float: left;
   font-size: 1.4em;
   font-weight: 400;
   padding: 0px;
   color: #AAA;
-  margin-top: -18px;
+  margin-top: -25px;
 }
 .main .view .viewHeader .functions {
   float: right;
@@ -184,6 +188,8 @@ body {
 }
 .main .view .viewHeader .functions .button.active {
   background-color: #54b9cd;
+  height: 36px;
+  align-content: center;
 }
 .main .view .viewHeader .functions .button.inverz {
   background-color: inherit;
@@ -296,6 +302,13 @@ a.remove:hover {
   width: 65%;
   margin-left: -5%;
 }
+
+.add-task-input {
+  height: 70%;
+  width: 70%;
+  margin-left: -2%;
+}
+
 
 .task-created {
   margin-right: 20px; font-size: 12px;
