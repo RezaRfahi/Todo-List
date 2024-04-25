@@ -29,9 +29,13 @@ function addFolders($name){
 }
 
 function getTasks(){
+    $where_folder = "";
+    if(isset($_GET['folder'])){
+        $where_folder = "and folder_id = $_GET[folder]";
+    }
     global $pdo;
     $user_id = currentUser();
-    $query = "SELECT * FROM `tasks` WHERE `user_id` = ?";
+    $query = "SELECT * FROM `tasks` WHERE `user_id` = ? $where_folder";
     $stmt = $pdo->prepare($query);
     $stmt->execute([$user_id]);
     $records = $stmt->fetchAll(PDO::FETCH_OBJ);

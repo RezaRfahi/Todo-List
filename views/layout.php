@@ -25,6 +25,7 @@
             <div class="menu">
                 <div class="title">Folder</div>
                 <ul class="folder-list">
+                    <li class="active"><i class="fa fa-folder"></i>All</li>
                     <?php foreach ($folders as $folder) : ?>
                         <li>
                             <svg class="svg-inline--fa fa-folder" aria-hidden="true" focusable="false" data-prefix="fas"
@@ -33,7 +34,9 @@
                                 <path fill="currentColor"
                                       d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"></path>
                             </svg><!-- <i class="fa fa-folder"></i> Font Awesome fontawesome.com -->
-                            <?= $folder->name ?>
+                            <a href="?folder=<?= $folder->id ?>" class="folder" ><?= $folder->name ?></a>
+
+
                             <a class="remove" href="?delete_folder=<?= $folder->id ?> "
                                onclick="return confirm('Are you sure for removing?');">
                                 <!-- <i style="padding-left: 50%;" class="fa fa-trash"></i> Font Awesome fontawesome.com -->
@@ -47,7 +50,6 @@
                         </li>
 
                     <?php endforeach; ?>
-                    <li class="active"><i class="fa fa-folder"></i>Current Folder <i class="fa fa-trash"></i></li>
                 </ul>
                 <div class="add-folder-container">
                     <input id="addFolderTxt" type="text" class="add-folder-input" id="newFolderName"
