@@ -187,9 +187,11 @@ body {
   font-weight: 700;
 }
 .main .view .viewHeader .functions .button.active {
+  margin-top: -9px;
   background-color: #54b9cd;
-  height: 36px;
+  height: 45px;
   align-content: center;
+  margin-right: 20px;
 }
 .main .view .viewHeader .functions .button.inverz {
   background-color: inherit;
@@ -304,8 +306,10 @@ a.remove:hover {
 }
 
 .add-task-input {
-  height: 70%;
-  width: 70%;
+  text-align: center;
+  border-radius: 3px;
+  height: 100%;
+  width: 86%;
   margin-left: -2%;
 }
 
