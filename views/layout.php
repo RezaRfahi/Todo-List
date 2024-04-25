@@ -25,9 +25,9 @@
             <div class="menu">
                 <div class="title">Folder</div>
                 <ul class="folder-list">
-                    <li class="active"><i class="fa fa-folder"></i>All</li>
+                    <li class="<?= isset($_GET['folder']) ? '' : 'active' ?>"><i class="fa fa-folder"></i>All</li>
                     <?php foreach ($folders as $folder) : ?>
-                        <li>
+                        <li class="<?= ($_GET['folder'] == $folder->id) ? 'active' : '' ?>">
                             <svg class="svg-inline--fa fa-folder" aria-hidden="true" focusable="false" data-prefix="fas"
                                  data-icon="folder" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                  data-fa-i2svg="">
@@ -73,7 +73,9 @@
                 <div class="list">
                     <div class="title">Today</div>
                     <ul>
-
+                        <?php if(empty($tasks)): ?>
+                            <li> There's No Task ...</li>
+                        <?php else: ?>
                         <?php foreach ($tasks as $task) : ?>
                             <li class= <?= $task->is_done ? "checked" : "" ?>>
                                 <i style="margin-left: 5px"
@@ -92,7 +94,10 @@
                                     </a>
                                 </div>
                             </li>
-                        <?php endforeach; ?>
+                        <?php endforeach;?>
+
+                        <?php endif;?>
+
                         <!--            <li class="checked"><i class="fa fa-check-square"></i><span>Update team page</span>-->
                         <!--              <div class="info">-->
                         <!--                <div class="button green">In progress</div><span>Complete by 25/04/2014</span>-->

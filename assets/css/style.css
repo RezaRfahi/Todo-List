@@ -134,7 +134,8 @@ body {
   transition: 0.25s all;
 }
 .main .nav .menu ul li.active {
-  color: #79BC46;
+  background-color: azure;
+  color: teal;
 }
 .main .nav .menu ul li:hover {
   background-color: #999;
@@ -223,8 +224,8 @@ body {
   color: #777;
 }
 .main .view .content .list ul li {
-  width: 100%;
-  height: 50px;
+  width: 98%;
+  height: 55px;
   line-height: 50px;
   list-style: none;
   border-top: 1px solid #AAA;
@@ -234,6 +235,7 @@ body {
 }
 .main .view .content .list ul li:last-child {
   border-bottom: 1px solid #AAA;
+  border-left: 2px dashed paleturquoise
 }
 .main .view .content .list ul li i {
   float: left;
@@ -246,9 +248,11 @@ body {
 .main .view .content .list ul li span {
   float: left;
   font-weight: 600;
+  padding-left: 12px;
 }
 .main .view .content .list ul li .info {
   float: right;
+  margin-right: 20px;
 }
 .main .view .content .list ul li .info span {
   font-weight: 300;
