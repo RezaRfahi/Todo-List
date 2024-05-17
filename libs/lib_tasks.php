@@ -9,7 +9,7 @@ function getFolders(){
     return $records;
 }
 
-function deleteFolders($id){
+function deleteFolder($id){
     global $pdo;
     $query = "DELETE FROM `folders` WHERE `id` = ?";
     $stmt = $pdo->prepare($query);
@@ -18,7 +18,7 @@ function deleteFolders($id){
     return $rows;
 }
 
-function addFolders($name){
+function addFolder($name){
     global $pdo;
     $user_id = currentUser();
     $query = "INSERT INTO `folders`(`name`, `user_id`) VALUES (?, ?)";
@@ -47,6 +47,16 @@ function deleteTask($id){
     $query = "DELETE FROM `tasks` WHERE `id` = ?";
     $stmt = $pdo->prepare($query);
     $stmt->execute([$id]);
+    $rows = $stmt->rowCount();
+    return $rows;
+}
+
+function addTask($title, $folderId){
+    global $pdo;
+    $user_id = currentUser();
+    $query = "INSERT INTO `tasks`(`title`, `user_id`, `folder_id`,) VALUES (?, ?, ?)";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$title, $user_id, $folderId]);
     $rows = $stmt->rowCount();
     return $rows;
 }

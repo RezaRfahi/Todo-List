@@ -326,10 +326,3 @@ a.remove:hover {
   text-decoration: none;
   color: black;
 }
-
-#addTaskBtn {
-  margin-left: -20%;
-  display: contents;
-  width: 139%;
-  height: 99%;
-}

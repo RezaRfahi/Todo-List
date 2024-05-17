@@ -16,7 +16,17 @@ switch ($_POST['action']){
             echo "Please Enter a folder name with more than 3 characters";
             die();
         }
-        echo addFolders($_POST['folderName']);
+        echo addFolder($_POST['folderName']);
+        break;
+
+    case 'addTask' :
+        if (!isset($_POST['taskTitle']) || strlen($_POST['taskTitle']) < 3)
+        {
+            echo "Please Enter a task title with more than 3 characters";
+            die();
+        }
+        var_dump($_POST);
+//        echo addTask($_POST['taskTitle'], $_POST['folderId']);
         break;
 
     default:
