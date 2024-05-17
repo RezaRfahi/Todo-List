@@ -11,8 +11,8 @@
 <div class="page">
     <div class="pageHeader">
         <div class="title">Dashboard</div>
-        <div class="userPanel"><span class="username">Nicole Aniston </span><img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRec2Lcwv5fFgOkjrCMpmfvKVfizgB1Z-yh1av0vheec76zNITPjwm_75_DXcb8j9npfWU&usqp=CAU"
+        <div class="userPanel"><span class="username">Cole Palmer</span><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjNwk1L_wZbOJLA7Jo3F2OY14waDXy_1w35cVNJnQf7A&s"
                     width="40" height="40"/></div>
     </div>
     <div class="main">
@@ -27,7 +27,7 @@
                 <ul class="folder-list">
                     <li class="<?= isset($_GET['folder']) ? '' : 'active' ?>"><i class="fa fa-folder"></i>All</li>
                     <?php foreach ($folders as $folder) : ?>
-                        <li class="<?= ($_GET['folder'] == $folder->id) ? 'active' : '' ?>">
+                        <li class="<?= isset($_GET['folder']) ? ($_GET['folder'] == $folder->id) ? 'active' : '' : '' ?>">
                             <svg class="svg-inline--fa fa-folder" aria-hidden="true" focusable="false" data-prefix="fas"
                                  data-icon="folder" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                  data-fa-i2svg="">
@@ -74,12 +74,11 @@
                     <div class="title">Today</div>
                     <ul>
                         <?php if(empty($tasks)): ?>
-                            <li> There's No Task ...</li>
+                            <li> <span> There's No Task ... </span> </li>
                         <?php else: ?>
                         <?php foreach ($tasks as $task) : ?>
                             <li class= <?= $task->is_done ? "checked" : "" ?>>
-                                <i style="margin-left: 5px"
-                                   class="fa <?= $task->is_done ? "fa-check-square" : "fa-square" ?>"></i>
+                                <i style="margin-left: 5px" class="fa <?= $task->is_done ? "fa-check-square" : "fa-square" ?>"></i>
                                 <span><?= $task->title ?></span>
                                 <div class="info">
                                     <span class="task-created"><?= $task->created_at ?></span>

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="685e8dc2-4446-4c25-9157-b8fec6be6783" name="Changes" comment="" />
+    <list default="true" id="685e8dc2-4446-4c25-9157-b8fec6be6783" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +83,7 @@
     &quot;git-widget-placeholder&quot;: &quot;curd&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.6.1&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.6.1&quot;,
-    &quot;last_opened_file_path&quot;: &quot;H:/PHP/Projects/Todo-List&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/PHP/Laravel/charity&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -110,6 +113,8 @@
       <workItem from="1712491319393" duration="85000" />
       <workItem from="1713463525105" duration="10615000" />
       <workItem from="1714047442241" duration="9069000" />
+      <workItem from="1714459366762" duration="1237000" />
+      <workItem from="1715948630619" duration="137000" />
     </task>
     <servers />
   </component>
