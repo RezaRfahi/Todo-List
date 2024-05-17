@@ -12,7 +12,7 @@
     <div class="pageHeader">
         <div class="title">Dashboard</div>
         <div class="userPanel"><span class="username">Cole Palmer</span><img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjNwk1L_wZbOJLA7Jo3F2OY14waDXy_1w35cVNJnQf7A&s"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdmoWmIqCXoIdlfUb4uPc_Qcj4_MoQOmkWpLjHpV7x1Q&s"
                     width="40" height="40"/></div>
     </div>
     <div class="main">
@@ -66,7 +66,7 @@
                     <input id="addTaskTxt" type="text" class="add-task-input" placeholder="New Task Name" data-listener-added_40da385b="true" data-listener-added_1c538e48="true"/>
                 </div>
                 <div class="functions">
-                    <div class="button active">Add New Task</div>
+                    <div class="button active" ><button  id="addTaskBtn" >Add New Task</button></div>
                 </div>
             </div>
             <div class="content">
