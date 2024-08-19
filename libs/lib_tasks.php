@@ -54,7 +54,7 @@ function deleteTask($id){
 function addTask($title, $folderId){
     global $pdo;
     $user_id = currentUser();
-    $query = "INSERT INTO `tasks`(`title`, `user_id`, `folder_id`,) VALUES (?, ?, ?)";
+    $query = "INSERT INTO `tasks`(`title`, `user_id`, `folder_id`) VALUES (?, ?, ?)";
     $stmt = $pdo->prepare($query);
     $stmt->execute([$title, $user_id, $folderId]);
     $rows = $stmt->rowCount();

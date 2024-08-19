@@ -133,17 +133,21 @@
         crossorigin="anonymous"></script>
 <script>
     $(document).ready(function () {
+        // Add Folder button click event
         $('#addFolderBtn').click(function (e) {
             var input = $('#addFolderTxt');
             $.ajax({
                 url: "process/ajaxHandler.php",
                 method: "POST",
-                data: {action: "addFolder", folderName: input.val()},
+                data: { action: "addFolder", folderName: input.val() },
                 success: function (response) {
                     if (response == 1) {
-                        $('<li><i class="fa fa-folder"></i>'
-                            + input.val() +
-                            '<a class="remove" href="?delete_folder=<?= $folder->id ?> " onclick="return confirm("Are you sure for removing?");"><svg class="svg-inline--fa fa-trash" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg> </a></li>')
+                        $('<li><i class="fa fa-folder"></i>' +
+                            input.val() +
+                            '<a class="remove" href="?delete_folder=<?= $folder->id ?>" onclick="return confirm(\'Are you sure you want to remove this folder?\');">' +
+                            '<svg class="svg-inline--fa fa-trash" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">' +
+                            '<path fill="currentColor" d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>' +
+                            '</a></li>')
                             .appendTo('.folder-list');
                     } else {
                         alert(response);
@@ -152,27 +156,26 @@
             });
         });
 
+        // Add Task button click event
         $('#addTaskBtn').click(function (e) {
             var input = $('#addTaskTxt');
             $.ajax({
                 url: "process/ajaxHandler.php",
                 method: "POST",
-                data: {action: "addTask", taskTitle: input.val(), folderId: <? $_GET['folder'] ?>},
+                data: { action: "addTask", taskTitle: input.val(), folderId: <?= $_GET['folder'] ?> },
                 success: function (response) {
-                    alert(response);
-
-                    //if (response == 1) {
-                    //    //$('<li><i class="fa fa-folder"></i>'
-                    //    //    + input.val() +
-                    //    //    '<a class="remove" href="?delete_folder=<?php ////= $folder->id ?>//// " onclick="return confirm("Are you sure for removing?");"><svg class="svg-inline--fa fa-trash" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg> </a></li>')
-                    //    //    .appendTo('.folder-list');
-                    //} else {
-                    //    alert(response);
-                    //}
+                    if (response == 1) {
+                        location.reload();
+                    } else {
+                        alert(response);
+                    }
                 }
             });
         });
+
+        $('#addTaskTxt').focus();
     });
+
 </script>
 </body>
 </html>
