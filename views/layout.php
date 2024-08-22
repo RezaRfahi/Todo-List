@@ -34,10 +34,10 @@
                                 <path fill="currentColor"
                                       d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"></path>
                             </svg><!-- <i class="fa fa-folder"></i> Font Awesome fontawesome.com -->
-                            <a href="?folder=<?= $folder->id ?>" class="folder" ><?= $folder->name ?></a>
+                            <a href='<?= appUrl("?folder= $folder->id") ?>' class="folder" ><?= $folder->name ?></a>
 
 
-                            <a class="remove" href="?delete_folder=<?= $folder->id ?> "
+                            <a class="remove" href='<?= appUrl("?delete_folder=$folder->id") ?> '
                                onclick="return confirm('Are you sure for removing?');">
                                 <!-- <i style="padding-left: 50%;" class="fa fa-trash"></i> Font Awesome fontawesome.com -->
                                 <svg class="svg-inline--fa fa-trash" aria-hidden="true" focusable="false"
@@ -82,7 +82,7 @@
                                 <span><?= $task->title ?></span>
                                 <div class="info">
                                     <span class="task-created"><?= $task->created_at ?></span>
-                                    <a class="remove" href="?delete_task=<?= $task->id ?>"
+                                    <a class="remove" href='?<?= appUrl("delete_task=$task->id") ?>'
                                        onclick="return confirm('Are you sure for removing?');">
                                         <svg class="svg-inline--fa fa-trash" aria-hidden="true" focusable="false"
                                              data-prefix="fas" data-icon="trash" role="img"
@@ -144,7 +144,7 @@
                     if (response == 1) {
                         $('<li><i class="fa fa-folder"></i>' +
                             input.val() +
-                            '<a class="remove" href="?delete_folder=<?= $folder->id ?>" onclick="return confirm(\'Are you sure you want to remove this folder?\');">' +
+                            '<a class="remove" href="<?= appUrl("?delete_folder=$folder->id")  ?>" onclick="return confirm(\'Are you sure you want to remove this folder?\');">' +
                             '<svg class="svg-inline--fa fa-trash" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">' +
                             '<path fill="currentColor" d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>' +
                             '</a></li>')
