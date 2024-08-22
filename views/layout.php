@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title><?= SITE_TITLE ?></title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href='..\assets\css\style.css'>
 
 </head>
 <body>
@@ -162,7 +162,7 @@
             $.ajax({
                 url: "process/ajaxHandler.php",
                 method: "POST",
-                data: { action: "addTask", taskTitle: input.val(), folderId: <?= $_GET['folder'] ?> },
+                data: { action: "addTask", taskTitle: input.val(), folderId: <?= isset($_GET['folder']) ? $_GET['folder'] : 0 ?> },
                 success: function (response) {
                     if (response == 1) {
                         location.reload();

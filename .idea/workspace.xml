@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="685e8dc2-4446-4c25-9157-b8fec6be6783" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/lib_tasks.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/lib_tasks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process/ajaxHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/process/ajaxHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/constans.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/constans.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,25 +77,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "curd",
-    "ignore.virus.scanning.warn.message": "true",
-    "javascript.nodejs.core.library.configured.version": "20.6.1",
-    "javascript.nodejs.core.library.typings.version": "20.6.1",
-    "last_opened_file_path": "H:/PHP/Projects/Todo-List",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;curd&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;20.6.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;20.6.1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;H:/PHP/Projects/Todo-List&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\PHP\Projects\Todo-List\views" />
@@ -123,7 +123,8 @@
       <workItem from="1716392052403" duration="35000" />
       <workItem from="1718272663996" duration="191000" />
       <workItem from="1721858090947" duration="271000" />
-      <workItem from="1724100393251" duration="4151000" />
+      <workItem from="1724100393251" duration="4850000" />
+      <workItem from="1724344249166" duration="3642000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,15 @@ function toBeDie($message)
 }
 
 
+function appUrl($uri = '')
+{
+    return BASE_URL . $uri;
+}
+
+function appPath($path = '')
+{
+    return BASE_PATH . $path;
+}
 function isAjaxRequest()
 {
     if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
